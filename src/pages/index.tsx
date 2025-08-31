@@ -120,18 +120,6 @@ function VeilFeatures() {
   );
 }
 
-function VeilGetStarted() {
-  return (
-    <section id="get-started" className={styles["veil-get-started"]}>
-      <h2>Get Started with Veil Lang</h2>
-      <p>Ready to dive in? Check out our documentation!</p>
-      <Link className={styles["cta-button"]} to="/docs">
-        Documentation
-      </Link>
-    </section>
-  );
-}
-
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (

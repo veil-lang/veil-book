@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 pagination_prev: null
 ---
 
@@ -73,4 +73,4 @@ Hello, World!
 
 **Still need help?**
 - [GitHub Issues](https://github.com/veil-lang/veil/issues)
-- [Discord](https://discord.gg/veil-lang)
+- [Discord](https://dsc.gg/velang)

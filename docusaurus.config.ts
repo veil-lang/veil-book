@@ -33,6 +33,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          routeBasePath: "docs",
         },
 
         blog: {
@@ -58,20 +59,6 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      "@docusaurus/plugin-client-redirects",
-      {
-        redirects: [
-          {
-            to: "/docs/intro/installation",
-            from: "/docs/",
-          },
-        ],
-      },
-    ],
-  ],
-
   themeConfig: {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
@@ -94,12 +81,12 @@ const config: Config = {
             {
               label: "Getting Started",
 
-              to: "/docs/",
+              to: "/veil-book/docs/",
             },
 
             {
               label: "Language Basics",
-              to: "/docs/intro/language-basics",
+              to: "/veil-book/docs/intro/language-basics",
             },
           ],
         },
