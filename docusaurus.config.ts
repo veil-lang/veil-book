@@ -13,10 +13,10 @@ const config: Config = {
   },
 
   url: "https://veil-lang.org",
-  baseUrl: "/",
+  baseUrl: "/veil-book",
 
   organizationName: "veil-lang",
-  projectName: "veil",
+  projectName: "veil-book",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
