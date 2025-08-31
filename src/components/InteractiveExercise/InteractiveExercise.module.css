@@ -1,0 +1,248 @@
+.exerciseContainer {
+  border: none;
+  border-radius: 0;
+  padding: 3rem 0;
+  margin: 4rem 0;
+  background: transparent;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: "Inter", sans-serif;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.exerciseContainer:last-child {
+  border-bottom: none;
+}
+
+.exerciseHeader {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.exerciseHeader h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content);
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+}
+
+.exerciseHeader p {
+  color: var(--ifm-color-content-secondary);
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.codeEditor {
+  margin: 2rem 0;
+}
+
+.codeEditor label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.editorWrapper {
+  margin: 1rem 0;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+[data-theme='dark'] .editorWrapper {
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: flex-start;
+}
+
+.checkButton {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.checkButton:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.hintButton {
+  background: transparent;
+  color: var(--ifm-color-content-secondary);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.hintButton:hover {
+  color: var(--ifm-color-content);
+  border-color: var(--ifm-color-emphasis-400);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.hint {
+  background: #f8fafc;
+  border-left: 4px solid #3b82f6;
+  border-radius: 0;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  color: var(--ifm-color-content);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+[data-theme='dark'] .hint {
+  background: var(--ifm-color-emphasis-200);
+  border-left-color: #60a5fa;
+}
+
+.hint strong {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.results {
+  margin: 2rem 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.results h4 {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content);
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.testPassed,
+.testFailed {
+  margin: 0.75rem 0;
+  font-weight: 400;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
+
+.testPassed {
+  color: #059669;
+}
+
+.testFailed {
+  color: #dc2626;
+}
+
+.testPassed::before {
+  content: "✓";
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.testFailed::before {
+  content: "✗";
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  color: #166534;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+[data-theme='dark'] .success {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.expectedOutput {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.expectedOutput h4 {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+[data-theme='dark'] .testPassed {
+  color: #4ade80;
+}
+
+[data-theme='dark'] .testFailed {
+  color: #f87171;
+}
+
+@media (max-width: 768px) {
+  .exerciseContainer {
+    padding: 2rem 0;
+    margin: 3rem 0;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .checkButton, .hintButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .exerciseHeader h3 {
+    font-size: 1.5rem;
+  }
+
+  .exerciseHeader p {
+    font-size: 1rem;
+  }
+}

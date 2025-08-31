@@ -1,0 +1,749 @@
+/* Layout Overrides */
+.veil-layout .main-wrapper {
+  background-color: var(--bg) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.veil-layout main[role="main"] {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.veil-layout .container {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Prevent horizontal overflow */
+.main-wrapper,
+.container,
+.row {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 0.5rem 0 !important;
+  min-height: auto !important;
+  z-index: 1000 !important;
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.navbar > .container,
+.navbar__inner {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar .container-fluid,
+.navbar .container {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+[data-theme="dark"] .navbar {
+  background-color: rgba(20, 20, 20, 0.95) !important;
+}
+
+.navbar__brand {
+  margin-right: 1.5rem !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar__title {
+  font-weight: 500 !important;
+  color: #667eea !important;
+  font-family: "MuseoModerno", sans-serif !important;
+  font-size: 1.25rem !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+.navbar__link {
+  color: var(--text) !important;
+  font-weight: 400 !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 4px !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar__link:hover {
+  color: #555 !important;
+  background-color: #f8f9fa !important;
+  text-decoration: none !important;
+}
+
+[data-theme="dark"] .navbar__link:hover {
+  background-color: #333 !important;
+}
+
+/* Desktop Navbar */
+@media (min-width: 997px) {
+  .navbar__items {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+
+  .navbar__item {
+    display: flex !important;
+  }
+}
+
+/* Header Section */
+.veil-header {
+  width: 100vw !important;
+  height: 40vh !important;
+  min-height: 400px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  padding: 2rem !important;
+  background-color: var(--bg) !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+}
+
+.veil-logo {
+  margin-bottom: 1.5rem !important;
+}
+
+.veil-logo h1 {
+  font-size: 13rem !important;
+  font-weight: 700 !important;
+  color: #667eea !important;
+  line-height: 1 !important;
+  font-family: "MuseoModerno", sans-serif !important;
+  margin: 0 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.veil-version {
+  margin-top: 1.5rem !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+}
+
+.versionText {
+  color: var(--gray) !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+}
+
+.version-number {
+  color: var(--text) !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+}
+
+.versionSeparator {
+  color: var(--light-gray) !important;
+  font-size: 1.25rem !important;
+  font-weight: 300 !important;
+  margin: 0 0.25rem !important;
+}
+
+[data-theme="dark"] .versionSeparator {
+  color: #4a5568 !important;
+}
+
+.veil-version span {
+  color: var(--gray) !important;
+  font-size: 0.95rem !important;
+}
+
+.installation-link {
+  color: #3b82f6 !important;
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.25rem !important;
+}
+
+.installation-link:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline !important;
+}
+
+.installation-link::after {
+  content: "" !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14' stroke='%233b82f6' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+.cta-button {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  text-align: center !important;
+  background: #3b82f6 !important;
+  border: 2px solid #3b82f6 !important;
+  color: white !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.875rem !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  text-decoration: none !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.cta-button:hover {
+  border-color: #1f2937 !important;
+  background: #3b82f6 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.cta-button::after {
+  content: "" !important;
+  width: 12px !important;
+  height: 12px !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+/* Main Content */
+.veil-main {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 2rem !important;
+  background-color: var(--bg) !important;
+  text-align: center !important;
+}
+
+/* Intro Section */
+.veil-intro {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 4rem !important;
+  margin-bottom: 4rem !important;
+  align-items: center !important;
+  text-align: left !important;
+  max-width: 1000px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 4rem !important;
+}
+
+.intro-content {
+  padding-top: 1rem !important;
+}
+
+.veil-intro h2 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 2rem !important;
+  color: var(--text) !important;
+  font-family: "Inter", sans-serif !important;
+  line-height: 1.1 !important;
+}
+
+.subtitle {
+  color: var(--gray) !important;
+  font-size: 1.3rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 2.5rem !important;
+  font-weight: 400 !important;
+}
+
+.download-section {
+  margin-top: 2rem !important;
+}
+
+.download-button {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  text-align: center !important;
+  background: #3b82f6 !important;
+  border: 2px solid #3b82f6 !important;
+  color: white !important;
+  padding: 1rem 2rem !important;
+  font-size: 1rem !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  text-decoration: none !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.download-button:hover {
+  border-color: #1f2937 !important;
+  background: #3b82f6 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.download-button::after {
+  content: "" !important;
+  width: 12px !important;
+  height: 12px !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
+}
+
+.veil-code-example {
+  position: relative !important;
+  background-color: #f8f9fa !important;
+  border-radius: 8px !important;
+  padding: 2.5rem 2rem 2rem 2rem !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  overflow-x: auto !important;
+  font-family: "JetBrains Mono", "SF Mono", "Monaco", "Cascadia Code",
+    "Roboto Mono", Consolas, "Courier New", monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  border: 1px solid #e1e8ed !important;
+  font-weight: 400 !important;
+}
+
+[data-theme="dark"] .veil-code-example {
+  background-color: #0d1117 !important;
+  border-color: #30363d !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.veil-code-example::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 1.2rem !important;
+  left: 1.5rem !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background-color: #ff5f56 !important;
+  box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #27c93f !important;
+  opacity: 0.8 !important;
+}
+
+.veil-code-example pre {
+  margin: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  white-space: pre-wrap !important;
+  word-break: normal !important;
+}
+
+.veil-code-example code {
+  background: transparent !important;
+  color: #24292e !important;
+  font-family: "JetBrains Mono", "SF Mono", "Monaco", "Cascadia Code",
+    "Roboto Mono", Consolas, "Courier New", monospace !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+[data-theme="dark"] .veil-code-example code {
+  color: #e6edf3 !important;
+}
+
+/* Syntax Highlighting */
+.code-keyword {
+  color: #d73a49 !important;
+  font-weight: 600 !important;
+}
+
+.code-type {
+  color: #005cc5 !important;
+  font-weight: 500 !important;
+}
+
+.code-function {
+  color: #6f42c1 !important;
+  font-weight: 500 !important;
+}
+
+.code-string {
+  color: #032f62 !important;
+  font-weight: 500 !important;
+}
+
+.code-module {
+  color: #005cc5 !important;
+  font-weight: 500 !important;
+}
+
+.code-comment {
+  color: #6a737d !important;
+  font-style: italic !important;
+}
+
+.code-punctuation {
+  color: #24292e !important;
+  font-weight: 600 !important;
+}
+
+.code-operator {
+  color: #d73a49 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .code-keyword {
+  color: #ff7b72 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .code-type {
+  color: #79c0ff !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .code-function {
+  color: #d2a8ff !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .code-string {
+  color: #a5d6ff !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .code-module {
+  color: #79c0ff !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .code-comment {
+  color: #8b949e !important;
+  font-style: italic !important;
+}
+
+[data-theme="dark"] .code-punctuation {
+  color: #e6edf3 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .code-operator {
+  color: #79c0ff !important;
+  font-weight: 600 !important;
+}
+
+/* Features Section */
+.veil-section {
+  margin-bottom: 5rem !important;
+  padding: 2rem !important;
+}
+
+.veil-section h2 {
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 3rem !important;
+  color: var(--text) !important;
+  font-family: "Inter", sans-serif !important;
+  text-align: center !important;
+}
+
+.features-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2.5rem !important;
+  margin-top: 2rem !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.feature-card {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 1.2rem !important;
+  transition: all 0.2s ease !important;
+  background-color: transparent !important;
+  padding: 1.5rem !important;
+  border: none !important;
+  border-radius: 8px !important;
+}
+
+.feature-card .icon {
+  font-size: 1.4rem !important;
+  color: #667eea !important;
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  flex-shrink: 0 !important;
+  margin-top: 0.3rem !important;
+}
+
+.feature-text {
+  flex: 1 !important;
+}
+
+.feature-text h3 {
+  font-size: 1.2rem !important;
+  margin-bottom: 0.7rem !important;
+  color: var(--text) !important;
+  font-weight: 600 !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.feature-text p {
+  color: var(--gray) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* Get Started Section */
+.veil-get-started {
+  text-align: center !important;
+  padding: 4rem 2rem !important;
+  background-color: var(--bg) !important;
+  margin-top: 3rem !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+.veil-get-started h2 {
+  color: var(--text) !important;
+  margin-bottom: 1.5rem !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 2.2rem !important;
+  font-weight: 600 !important;
+}
+
+.veil-get-started p {
+  margin-bottom: 2.5rem !important;
+  color: var(--gray) !important;
+  font-size: 1.1rem !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  line-height: 1.6 !important;
+}
+
+.footer {
+  text-align: center !important;
+  padding: 2rem !important;
+  font-size: 0.9rem !important;
+  color: var(--gray) !important;
+  border-top: 1px solid var(--border) !important;
+  background-color: var(--bg) !important;
+}
+
+.footer__copyright {
+  color: var(--gray) !important;
+}
+
+.footer a {
+  color: var(--text) !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.footer a:hover {
+  text-decoration: underline !important;
+  color: var(--accent) !important;
+}
+
+.veil-motto {
+  margin-bottom: 5rem !important;
+  padding: 3rem 2rem !important;
+  text-align: center !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.veil-motto h2 {
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 2.5rem !important;
+  color: var(--text) !important;
+  font-family: "Inter", sans-serif !important;
+  line-height: 1.3 !important;
+}
+
+.veil-motto p {
+  color: var(--gray) !important;
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 1.5rem !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .veil-intro {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .veil-motto {
+    padding: 2rem 1rem !important;
+  }
+
+  .veil-motto h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar > .container,
+  .navbar__inner,
+  .navbar .container-fluid,
+  .navbar .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .veil-header {
+    height: 35vh !important;
+    min-height: 300px !important;
+  }
+
+  .veil-logo h1 {
+    font-size: 4rem !important;
+  }
+
+  .veil-intro h2 {
+    font-size: 2.5rem !important;
+  }
+
+  .veil-main {
+    padding: 2rem 1rem !important;
+  }
+
+  .veil-header {
+    padding: 2rem 1rem !important;
+  }
+
+  .veil-code-example {
+    font-size: 0.9rem !important;
+    padding: 2rem 1.5rem 1.5rem 1.5rem !important;
+  }
+
+  .veil-code-example code {
+    font-size: 0.9rem !important;
+  }
+
+  .veil-motto h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .veil-get-started {
+    padding: 3rem 1rem !important;
+  }
+
+  .feature-card {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .veil-header {
+    height: 30vh !important;
+    min-height: 250px !important;
+  }
+
+  .veil-logo h1 {
+    font-size: 3rem !important;
+  }
+  .veil-intro h2 {
+    font-size: 2rem !important;
+  }
+
+  .veil-motto h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .veil-get-started h2 {
+    font-size: 1.8rem !important;
+  }
+  .veil-version {
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+  }
+
+  .version-separator {
+    display: none !important;
+  }
+
+  .veil-code-example {
+    font-size: 0.85rem !important;
+    padding: 1.5rem 1rem 1rem 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .veil-code-example code {
+    font-size: 0.85rem !important;
+  }
+}
+
+.navbar__toggle {
+  transform: scale(0) !important;
+}
