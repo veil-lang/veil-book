@@ -24,6 +24,11 @@ const sidebars: SidebarsConfig = {
         "intro/exercises",
       ],
     },
+    {
+      type: "category",
+      label: "Language Fundamentals",
+      items: ["fundamentals/types"],
+    },
     "cli",
     "stdlib",
     "reference",
